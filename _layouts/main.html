@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/site.css" />
+    <title>{{page.title}} - {{site.title}}</title>
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <h1 class="site-title">{{ site.title }}</h1>
+
+        <nav>
+          <ul>
+            {% for item in site.data.navigation %}
+            <li><a href="{{item.link}}">{{item.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <article>
+          <header>
+            <h2>{{page.title}}</h2>
+          </header>
+
+          <section>{{content}}</section>
+        </article>
+      </header>
+    </div>
+  </body>
+</html>
