@@ -1,54 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/styles/site.css" />
-    <title>{{page.title}} - {{site.title}}</title>
-  </head>
-  <body>
-    <div class="site blog">
-      <header class="site-header">
-        <h1 class="site-title">{{ site.title }}</h1>
+{% include base/header.html %}
 
-        <nav class="main-nav">
-          <ul>
-            {% for item in site.data.navigation %}
-            <li><a href="{{item.link}}">{{item.name}}</a></li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </header>
+<main>
+  <article>
+    <header>
+      <h2>{{page.title}}</h2>
+    </header>
 
-    <main>
-      <article>
-        <header>
-          <h2>{{page.title}}</h2>
-        </header>
+    <section>{{content}}</section>
+  </article>
+</main>
 
-        <section>{{content}}</section>
-      </article>
-    </main>
+<aside>
+  <section>
+    <header>
+      <h3>Latest Posts</h3>
+    </header>
 
-      <aside>
-        <section>
-            <header>
-                <h3>Latest Posts</h3>
-            </header>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</aside>
 
-            <ul>
-                {% for post in site.posts %}
-                  <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-        </section>
-      </aside>
-
-      <footer class="site-footer">
-        <p>&copy; All rights reserved - 2024</p>
-      </footer>
-    </div>
-  </body>
-</html>
+{% include base/footer.html %}
