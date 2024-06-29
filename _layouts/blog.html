@@ -7,7 +7,7 @@
     <title>{{page.title}} - {{site.title}}</title>
   </head>
   <body>
-    <div class="site">
+    <div class="site blog">
       <header class="site-header">
         <h1 class="site-title">{{ site.title }}</h1>
 
@@ -19,6 +19,8 @@
           </ul>
         </nav>
       </header>
+
+    <main>
       <article>
         <header>
           <h2>{{page.title}}</h2>
@@ -26,6 +28,23 @@
 
         <section>{{content}}</section>
       </article>
+    </main>
+
+      <aside>
+        <section>
+            <header>
+                <h3>Latest Posts</h3>
+            </header>
+
+            <ul>
+                {% for post in site.posts %}
+                  <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+        </section>
+      </aside>
 
       <footer class="site-footer">
         <p>&copy; All rights reserved - 2024</p>
