@@ -1,25 +1,28 @@
+
 body{
     padding: 2em;
-    padding-top: 7em;
 }
 
 .site{
     max-width: 900px;
     margin: 0 auto;
+    background: var(--clr-background);
+    color: var(--clr-text);
 }
 
 .site-header{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     padding-bottom: 1em;
-    border-bottom: 2px solid #EEE;
+    border-bottom: 2px solid light-dark(#EEE, #222);
     margin-bottom: 2em;
 }
 
 .site-title{
     margin-bottom: 0;
     line-height: 1;
+    font-size: 2.5em;
 }
 
 .site-footer{

@@ -1,0 +1,15 @@
+:root{
+    color-scheme: light dark;
+}
+
+.site{
+    --clr-background: #fff;
+    --clr-text: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    .site{
+        --clr-background: #000;
+        --clr-text: #fff;
+    }
+}
