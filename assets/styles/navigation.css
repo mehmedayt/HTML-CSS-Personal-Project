@@ -17,6 +17,12 @@
     color: orange;
     text-decoration: none;
     padding: 0.5em 1em;
+    transition: 
+        background-color 0.3s ease-in,
+        color 0.3s ease-in,
+        transform 0.3s ease-in
+        ;
+
 }
 
 .main-nav li.current-page > a,

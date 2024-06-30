@@ -17,6 +17,15 @@ body{
     padding-bottom: 1em;
     border-bottom: 2px solid light-dark(#EEE, #222);
     margin-bottom: 2em;
+    opacity: 0;
+    transform: translateY(-5em);
+    transition: opacity 0.3s ease-in,
+    transform 0.3s ease-in;
+}
+
+body.loaded .site-header{
+    opacity: 1;
+    transform: translateY(0em);
 }
 
 .site-title{
@@ -51,7 +60,34 @@ body.layout-blog .site > main{
     flex: 1 1 600px;
 }
 
+body .site > article{
+    opacity: 0;
+    transform: translateX(-5em);
+    transition: 
+        opacity 0.3s ease-in 0.5s,
+        transform 0.3s ease-in-out 0.5s;
+}
+
+body.loaded .site > article{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 body.layout-blog .site > aside{
     flex: 1 1 200px;
 
+}
+
+article p{
+    display: inline-block;
+    opacity: 0.5;
+    animation: spin linear both;
+    animation-timeline: view();
+    animation-range: contain;
+}
+
+@keyframes spin {
+    to{
+        opacity: 1;
+    }
 }
