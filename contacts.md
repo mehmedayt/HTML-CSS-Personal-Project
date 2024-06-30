@@ -4,4 +4,4 @@ title: Contacts
 permalink: /contacts/
 ---
 
-Working Hours ....
+{% include forms/contact.html %}
