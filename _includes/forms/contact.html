@@ -1,17 +1,17 @@
-<form action="#" class="contact">
+<form action="https://formspree.io/f/xgvwevwn" method="post" class="contact">
     
         <fieldset>
           <legend>User details:</legend>
           
           <div class="field text icon-username">
-              <input type="text" id="name" required>
+              <input type="text" name="full-name" id="name" required>
               <i class="fa fa-user"></i>  
               <label for="name">Full name: </label>
               <span class="helper">Hello there</span>
           </div>
           
           <div class="field text icon-email">
-              <input type="email" id="email" required>
+              <input type="email" name="email" id="email" required>
               <label for="email">Email: </label>
               <i class="fa fa-envelope"></i>  
           </div>
@@ -22,15 +22,15 @@
 
           
           <div class="field text icon-email">
-            <input type="text" id="subject" required>
+            <input type="text" name="subject" id="subject" required>
             <label for="subject">Subject: </label>
             <i class="fa-solid fa-angle-right"></i>  
         </div>
 
           
           <div class="field text textarea">
-            <textarea></textarea>
-            <label for="password">Message:</label>
+            <textarea name="message" id="message"></textarea>
+            <label for="message">Message:</label>
             <i class="fa-solid fa-file-lines"></i>  
           </div>
           
